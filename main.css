@@ -1,5 +1,4 @@
 body{
-    background: rgb(112, 112, 236);
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -12,9 +11,10 @@ section{
     background: white;
     border-radius: 10px;
     padding: 10px;
-    width: 500px;
+    width: auto;
     margin: auto;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.274);
+    max-width: 500px;
+    box-shadow: 3px 3px rgba(117, 27, 27, 0.274);
 }
 
 footer{
@@ -29,6 +29,6 @@ img{
 }
 
 body{
-    background-image: url("imagens/aatrox.png");
-    background-color: #cccccc;
-  }
+    background:  rgba(18, 18, 19, 0.959) url("imagens/aatrox.png") no-repeat top center;   
+    margin-top: 100px;
+}
