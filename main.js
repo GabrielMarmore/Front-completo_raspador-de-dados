@@ -1,13 +1,16 @@
 function raspar(documento) {
     var divNossa = document.createElement("div");
-    documento.querySelectorAll(".post").forEach(div => {
-        divNossa.appendChild(div);
+    //documento.querySelectorAll(".style__Desc-sc-1o884zt-9 hZPZqS").forEach(div => {
+    documento.querySelectorAll(".article__chapo").forEach(p => {
+        divNossa.appendChild(p);
     });
-    document.body.appendChild(divNossa);
+    const divPage = document.querySelector("section div:last-of-type")
+    divPage.appendChild(divNossa);
 }
 
 function pegarDados() {
-    fetch("https://fatecrl.edu.br/blog/noticias/post/santander-disponibiliza-50-mil-bolsas-de-tecnologia-em-parceria-com-a-dio")
+    //fetch("https://cors-anywhere.herokuapp.com//https://br.leagueoflegends.com/pt-br/champions/aatrox/")
+    fetch("https://cors-anywhere.herokuapp.com/https://br.millenium.gg/jogos/jogo-12/entidade-4083")
         .then(resp => resp.text())
         .then(pg => { 
             let dom = new DOMParser();
