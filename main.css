@@ -22,10 +22,9 @@ footer{
     margin-top: 10px;
     font-style: italic;
 }
-img{
-    width: 35%;
+.icon{
+    float: right;
     margin: 10px;
-    border-radius: 50%;
 }
 
 body{
