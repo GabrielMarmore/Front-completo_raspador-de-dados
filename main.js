@@ -1,11 +1,15 @@
 function raspar(documento) {
+    const subtitle = document.createElement("p");
     var divNossa = document.createElement("div");
     //documento.querySelectorAll(".style__Desc-sc-1o884zt-9 hZPZqS").forEach(div => {
-    documento.querySelectorAll(".article__chapo").forEach(p => {
-        divNossa.appendChild(p);
+    documento.querySelectorAll("div").forEach(div => {
+        if(div.classList=="article__title")document.querySelector("h1").innerHTML=div.innerHTML;//Verifiquei e somente essa div possue essa class
     });
+    subtitle.innerHTML=documento.querySelector(".article__chapo").innerHTML;subtitle.style.fontSize="18px";
+
     const divPage = document.querySelector("section div:last-of-type")
-    divPage.appendChild(divNossa);
+    document.querySelector("header").appendChild(subtitle);
+    //divPage.appendChild(divNossa);
 }
 
 function pegarDados() {
@@ -20,10 +24,9 @@ function pegarDados() {
         .catch(e => document.write(e));
 }
 
-function evento() {
-    document.querySelector("button").addEventListener("click", pegarDados);
-}
+//function evento() {document.querySelector("button").addEventListener("click", pegarDados);}
 
-window.onload = evento
+pegarDados()// window.onload carrega todo o doom depois aplica a função, dando f5 fica evidente a mudança de el
+//window.onload = pegarDados
 
 //https://cors-anywhere.herokuapp.com/linkdosite
