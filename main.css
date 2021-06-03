@@ -33,6 +33,10 @@ body{
     margin-top: 100px;
 }
 
+#github{
+    text-decoration: none; 
+    color:white;
+}
 a:hover{
     text-decoration: underline;
     color: rgb(218, 214, 214);
