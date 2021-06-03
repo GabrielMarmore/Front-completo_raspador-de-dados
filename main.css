@@ -34,5 +34,6 @@ body{
 }
 
 a:hover{
-    font-size: 18px;
+    text-decoration: underline;
+    color: whitesmoke;
 }
