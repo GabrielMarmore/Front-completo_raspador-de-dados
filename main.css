@@ -29,8 +29,9 @@ img{
 }
 
 body{
-    background:  rgba(18, 18, 19, 0.959) url("imagens/aatrox.png") no-repeat top center;   
+    background: rgba(18, 18, 19, 0.959) url("imagens/aatrox.png") no-repeat top center;   
     margin-top: 100px;
+    background-size: 90%;
 }
 
 a#github{
