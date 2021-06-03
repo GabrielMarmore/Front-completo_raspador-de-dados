@@ -9,7 +9,7 @@ function raspar(documento){
 
         p.innerHTML=documento.querySelector(".article__paragraph").innerHTML;
         p.style.textAlign="left"
-        subtitle.innerHTML=documento.querySelector(".article__chapo").innerHTML;subtitle.style.fontSize="18px";
+        subtitle.innerHTML=documento.querySelector(".article__chapo").innerHTML;subtitle.style.fontSize="20px";
         
         document.querySelector("header").appendChild(subtitle);
 
