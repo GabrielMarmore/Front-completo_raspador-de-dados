@@ -17,6 +17,7 @@ function raspar(documento){
         const a = documento.createElement("a"); a.href="darkin.html"; a.classList="icon";
         document.querySelector("div:first-child").insertBefore(a,p);
         a.appendChild(documento.querySelector(".c-card__avatar img"))
+        
         //skils
         const h2 = document.createElement("h2");h2.innerHTML=documento.querySelectorAll(".article__subtitle")[1].innerHTML;
         document.querySelector("section").insertBefore(h2, document.querySelector("div:last-child"));
@@ -45,7 +46,7 @@ function raspar(documento){
         documento.querySelectorAll("iframe").forEach(iframe=>{
             if(iframe.src=="https://www.youtube.com/embed/soQ9bukwAPs"){
                 document.querySelector("button").parentNode.insertBefore(iframe,document.querySelector("button"));
-                iframe.style.width="580px";iframe.style.heigth="315px"; 
+                iframe.style.width="580px";iframe.style.heigth="315px";
             }
         })
     }

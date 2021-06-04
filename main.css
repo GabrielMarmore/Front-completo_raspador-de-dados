@@ -58,12 +58,12 @@ a#github:hover{
 }
 
 a{
-    color: rgb(48, 2, 2);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 a:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(121, 2, 2);
     text-decoration: underline;
 }
 
