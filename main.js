@@ -1,5 +1,7 @@
 function raspar(documento){
     if(documento.title=="Aatrox - Habilidades e skins dos campeões de League of Legends - Millenium"){
+        document.title=documento.title.substring(0,documento.title.indexOf("-")-1);
+        
         const subtitle = document.createElement("p");
         const p = document.querySelector("div:first-child p");
 
