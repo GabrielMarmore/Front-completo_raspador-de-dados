@@ -13,13 +13,17 @@ function raspar(documento){
         img.style.textAlign="left";
         a.appendChild(img)
     }
-    else if(documento.title==""){
-        //document.querySelector("section").appendChild(documento.querySelector(""))
+    else if(documento.title=="Vídeo teaser do novo Aatrox é divulgado; confira"){
+        documento.querySelectorAll("iframe").forEach(iframe=>{
+            if(iframe.src=="https://www.youtube.com/embed/n_od4qeNzO4"){
+                document.querySelector("section").appendChild(iframe)
+            } 
+        })
     }
 }
 
 function pegarDados(){
-    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083", "https://ufogeeks.blogspot.com/2019/05/as-historias-dos-personagens-de-league.html", "https://www.youtube.com/watch?v=n_od4qeNzO4"]
+    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083", "https://ufogeeks.blogspot.com/2019/05/as-historias-dos-personagens-de-league.html", "https://arenaesports.com.br/league-of-legends/video-teaser-do-novo-aatrox-e-divulgado-confira/"]
     for(ix in urls){
         fetch(`https://cors-anywhere.herokuapp.com/${urls[ix]}`)
             .then(resp => resp.text())
