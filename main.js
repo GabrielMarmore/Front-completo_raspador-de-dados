@@ -9,7 +9,7 @@ function raspar(documento){
 
         p.innerHTML=documento.querySelector(".article__paragraph").innerHTML;
         p.innerHTML=p.innerHTML.substring(0,p.innerHTML.indexOf("."));
-        p.style.textAlign="left"
+        p.style.textAlign="justify"; p.innerHTML+="<br><a href='darkin.html'>Conheça mais da lore do Aatrox clicando aqui.</a>"
         subtitle.innerHTML=documento.querySelector(".article__chapo").innerHTML;subtitle.style.fontSize="20px";
         
         document.querySelector("header").appendChild(subtitle);

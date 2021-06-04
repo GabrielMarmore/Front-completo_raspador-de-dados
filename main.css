@@ -42,6 +42,16 @@ a#github:hover{
     color: rgb(218, 214, 214);
 }
 
+a{
+    color: rgb(48, 2, 2);
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
 footer{
     text-align: center;
 }
