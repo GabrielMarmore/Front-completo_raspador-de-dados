@@ -18,17 +18,10 @@ function raspar(documento){
         document.querySelector("div:first-child").insertBefore(a,p);
         a.appendChild(documento.querySelector(".c-card__avatar img"))
     }
-    /*
-    else if(documento.title=="Darkin | League of Legends Wiki | Fandom"){
-        
-    }
-    var divNossa = document.createElement("div");
-    const divPage = document.querySelector("section div:last-of-type")
-    divPage.appendChild(divNossa);*/
 }
 
 function pegarDados(){
-    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083","https://leagueoflegends.fandom.com/wiki/Darkin", "https://leagueoflegends.fandom.com/pt-br/wiki/Darkin"]
+    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083"]
     for(ix in urls){
         fetch(`https://cors-anywhere.herokuapp.com/${urls[ix]}`)
             .then(resp => resp.text())
