@@ -17,7 +17,6 @@ function raspar(documento){
         const a = documento.createElement("a"); a.href="darkin.html"; a.classList="icon";
         document.querySelector("div:first-child").insertBefore(a,p);
         a.appendChild(documento.querySelector(".c-card__avatar img"))
-        
         //skils
         const h2 = document.createElement("h2");h2.innerHTML=documento.querySelectorAll(".article__subtitle")[1].innerHTML;
         document.querySelector("section").insertBefore(h2, document.querySelector("div:last-child"));
@@ -43,10 +42,12 @@ function raspar(documento){
     }
 
     else if(documento.title=="AATROX | As histórias dos personagens de League of Legends - #01"){
+        const iframeDiv=document.createElement("div"); iframeDiv.classList="container";
         documento.querySelectorAll("iframe").forEach(iframe=>{
             if(iframe.src=="https://www.youtube.com/embed/soQ9bukwAPs"){
-                document.querySelector("button").parentNode.insertBefore(iframe,document.querySelector("button"));
-                iframe.style.width="580px";iframe.style.heigth="315px";
+                document.querySelector("button").parentNode.insertBefore(iframeDiv,document.querySelector("button"));
+                iframe.style.width="580px";iframe.style.heigth="315px"; iframe.classList="responsive";
+                iframeDiv.appendChild(iframe);
             }
         })
     }

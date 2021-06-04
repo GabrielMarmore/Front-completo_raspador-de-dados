@@ -19,7 +19,7 @@ section{
     box-shadow: 3px 3px 5px rgba(3, 3, 3, 0.623);
 }
 
-div:last-child div{
+.w-list-items__media{
     display: inline-block;
     margin: 5px;
 }
@@ -75,3 +75,20 @@ iframe{
     width:580px;
     height:315px;
 }
+
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
