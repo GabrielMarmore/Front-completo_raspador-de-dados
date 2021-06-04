@@ -4,7 +4,7 @@ function raspar(documento){
         const p = document.querySelector("div:first-child p");
 
         documento.querySelectorAll("div").forEach(div => {
-            if(div.classList=="article__title")document.querySelector("h1").innerHTML=div.innerHTML;//Verifiquei e somente essa div possue essa class
+            if(div.classList=="article__title")document.querySelector("h1").innerHTML=div.innerHTML;
         });
 
         p.innerHTML=documento.querySelector(".article__paragraph").innerHTML;
@@ -17,6 +17,10 @@ function raspar(documento){
         const a = documento.createElement("a"); a.href="darkin.html"; a.classList="icon";
         document.querySelector("div:first-child").insertBefore(a,p);
         a.appendChild(documento.querySelector(".c-card__avatar img"))
+
+        documento.querySelectorAll("div.w-list-items__media").forEach(div=>{
+            document.querySelector("div:last-child").insertBefore(div,document.querySelector("button"))
+        });
     }
 }
 
