@@ -41,3 +41,7 @@ a#github:hover{
     text-decoration: underline;
     color: rgb(218, 214, 214);
 }
+
+footer{
+    text-align: center;
+}

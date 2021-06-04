@@ -1,14 +1,16 @@
 function raspar(documento){
+   document.body.style.textAlign="left"; document.querySelector("h1").style.textAlign="center";
     if(documento.title=="Aatrox - Habilidades e skins dos campeões de League of Legends - Millenium"){
         const p = document.querySelector("p");
 
         p.innerHTML=documento.querySelector(".article__paragraph").innerHTML;
-        p.innerHTML=p.innerHTML.substring(p.innerHTML.indexOf("."),0);
+        p.innerHTML=p.innerHTML.substring(p.innerHTML.indexOf(".")+1); p.style.textAlign="justify"
         //p.style.display="block";
         
-        const a = document.createElement("a"); a.href="index.html"; a.style
+        const a = document.createElement("a"); a.href="index.html";
         const img = document.createElement("img");img.src="imagens/arrow_back.png"; img.alt="seta indicando a volta"; 
         document.querySelector("section").appendChild(a)
+        img.style.textAlign="left";
         a.appendChild(img)
     }
     else if(documento.title==""){
