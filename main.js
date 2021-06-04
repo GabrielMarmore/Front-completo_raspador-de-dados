@@ -17,15 +17,42 @@ function raspar(documento){
         const a = documento.createElement("a"); a.href="darkin.html"; a.classList="icon";
         document.querySelector("div:first-child").insertBefore(a,p);
         a.appendChild(documento.querySelector(".c-card__avatar img"))
+        //skils
+        const h2 = document.createElement("h2");h2.innerHTML=documento.querySelectorAll(".article__subtitle")[1].innerHTML;
+        document.querySelector("section").insertBefore(h2, document.querySelector("div:last-child"));
 
-        documento.querySelectorAll("div.w-list-items__media").forEach(div=>{
-            document.querySelector("div:last-child").insertBefore(div,document.querySelector("button"))
-        });
+        const arraySub=documento.querySelectorAll("div.w-list-items__subtitle"); //array com nome das skills
+        const arrayImg=documento.querySelectorAll("div.w-list-items__media"); //array com img das skills
+        for(let i=0;i<arrayImg.length; i++){
+            document.querySelector("div:last-child").insertBefore(arrayImg[i],document.querySelector("button"));
+
+            const pSkill = document.createElement("p");
+            arrayImg[i].addEventListener("click", ()=>{
+                if(h2.innerHTML!="Habilidades"){
+                    document.querySelector("div:last-child").removeChild(document.querySelector("div:last-child p"))
+                }
+                
+                h2.innerHTML=arraySub[i].innerHTML;
+                pSkill.innerHTML=documento.querySelectorAll(".w-list-items__infos")[i].innerHTML;
+                document.querySelector("button").parentNode.insertBefore(pSkill,document.querySelector("button"));
+
+                document.querySelector("iframe").src=documento.querySelectorAll("iframe")[i+1].src
+            })
+        }
+    }
+
+    else if(documento.title=="AATROX | As histórias dos personagens de League of Legends - #01"){
+        documento.querySelectorAll("iframe").forEach(iframe=>{
+            if(iframe.src=="https://www.youtube.com/embed/soQ9bukwAPs"){
+                document.querySelector("button").parentNode.insertBefore(iframe,document.querySelector("button"));
+                iframe.style.width="580px";iframe.style.heigth="315px"; 
+            }
+        })
     }
 }
 
 function pegarDados(){
-    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083"]
+    const urls =["https://br.millenium.gg/jogos/jogo-12/entidade-4083","https://ufogeeks.blogspot.com/2019/05/as-historias-dos-personagens-de-league.html"]
     for(ix in urls){
         fetch(`https://cors-anywhere.herokuapp.com/${urls[ix]}`)
             .then(resp => resp.text())

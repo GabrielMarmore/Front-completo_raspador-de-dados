@@ -19,8 +19,20 @@ section{
     box-shadow: 3px 3px 5px rgba(3, 3, 3, 0.623);
 }
 
-div:last-child img{
-    display: flex;
+div:last-child div{
+    display: inline-block;
+    margin: 5px;
+}
+
+div:last-child div img{
+    display: block ;
+}
+
+div:last-child div img:hover{
+    border-style:solid;
+}
+span{
+    font-size: 12px;
 }
 footer{
     color: white;
