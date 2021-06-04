@@ -36,6 +36,10 @@ div:last-child div img{
 div:last-child div img:hover{
     border-style:solid;
 }
+
+img{
+    cursor: pointer;
+}
 span{
     font-size: 12px;
 }
