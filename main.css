@@ -76,11 +76,6 @@ footer{
     text-align: center;
 }
 
-iframe{
-    width:580px;
-    height:315px;
-}
-
 .container{
     position: relative;
     overflow: hidden;
