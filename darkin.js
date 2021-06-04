@@ -16,7 +16,7 @@ function raspar(documento){
     else if(documento.title=="Vídeo teaser do novo Aatrox é divulgado; confira"){
         documento.querySelectorAll("iframe").forEach(iframe=>{
             if(iframe.src=="https://www.youtube.com/embed/n_od4qeNzO4"){
-                document.querySelector("section").appendChild(iframe)
+                document.querySelector("section").insertBefore(iframe, document.querySelector("a"))
             } 
         })
     }
