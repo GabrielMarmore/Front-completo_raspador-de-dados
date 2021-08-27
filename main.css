@@ -4,7 +4,8 @@ body{
     text-align: center;
     margin-top: 100px;
     background: rgba(18, 18, 19, 0.959) url("imagens/aatrox.png") no-repeat top center;
-    background-size: cover; 
+    background-size: cover;
+    background-attachment: fixed;
 }
 header{
     color: white;
